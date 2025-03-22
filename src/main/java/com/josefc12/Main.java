@@ -62,7 +62,7 @@ public class Main {
     }
 
     public static void printHelp() {
-        System.out.println("Usage: java -jar cs-player-rating-1.0-SNAPSHOT.jar <ROUNDS_TOTAL> <ROUNDS_SURVIVED> <KILLS_TOTAL> <DEATHS_TOTAL> <K_1_AMOUNT> <K_2_AMOUNT> <K_3_AMOUNT> <K_4_AMOUNT> <K_5_AMOUNT>");
+        System.out.println("Usage: java -jar cs-player-rating-1.0-SNAPSHOT.jar <ROUNDS_TOTAL> <KILLS_TOTAL> <DEATHS_TOTAL> <ADR_TOTAL> <K_1_AMOUNT> <K_2_AMOUNT> <K_3_AMOUNT> <K_4_AMOUNT> <K_5_AMOUNT>");
         System.out.println();
         System.out.println("Arguments:");
         System.out.println("  <ROUNDS_TOTAL>       Total number of rounds played.");
