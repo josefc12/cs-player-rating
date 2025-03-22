@@ -4,6 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
+        if (args.length == 1 && (args[0].equals("--help") || args[0].equals("-h"))) {
+            printHelp();
+            return;
+        }
+
         if (args.length <= 0){
             System.out.println("Please provide arguments.");
             return;
@@ -54,5 +59,27 @@ public class Main {
 
         System.out.println(FINAL_RATING);
 
+    }
+
+    public static void printHelp() {
+        System.out.println("Usage: java -jar cs-player-rating-1.0-SNAPSHOT.jar <ROUNDS_TOTAL> <ROUNDS_SURVIVED> <KILLS_TOTAL> <DEATHS_TOTAL> <K_1_AMOUNT> <K_2_AMOUNT> <K_3_AMOUNT> <K_4_AMOUNT> <K_5_AMOUNT>");
+        System.out.println();
+        System.out.println("Arguments:");
+        System.out.println("  <ROUNDS_TOTAL>       Total number of rounds played.");
+        System.out.println("  <KILLS_TOTAL>        Total number of kills made.");
+        System.out.println("  <DEATHS_TOTAL>       Total number of deaths.");
+        System.out.println("  <ADR_TOTAL>          Average damage per round.");
+        System.out.println("  <K_1_AMOUNT>         Number of rounds with 1 kill.");
+        System.out.println("  <K_2_AMOUNT>         Number of rounds with 2 kills.");
+        System.out.println("  <K_3_AMOUNT>         Number of rounds with 3 kills.");
+        System.out.println("  <K_4_AMOUNT>         Number of rounds with 4 kills.");
+        System.out.println("  <K_5_AMOUNT>         Number of rounds with 5 kills.");
+        System.out.println();
+        System.out.println("Description:");
+        System.out.println("This program calculates a player's rating based on their performance in a game.");
+        System.out.println("It uses various metrics such as kills, deaths, rounds survived, and the number of kills in each round.");
+        System.out.println();
+        System.out.println("Example:");
+        System.out.println("java -jar cs-player-rating-1.0-SNAPSHOT.jar 22 7 24 15 6 6 2 0 0");
     }
 }
